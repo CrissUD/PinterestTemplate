@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* -------------------------------------- VARIABLES ------------------------------------------- */
+:root{
+    --color-white: #fff;
+    --color-gray: #efefef;
+    --color-black: #222;
+}
+/* -------------------------------------- REGLAS GENERALES ------------------------------------------- */
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+figure{
+    margin: 0;
+}
+/* -------------------------------------- REGLAS HEADER ------------------------------------------- */
+header{
+    box-shadow: 0px 10px 14px -12px rgba(0,0,0,0.75);
+    width: 100vw;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    background: #fff;
+    z-index: 1;
+}
+
+nav{
+    margin: auto 18px;
+}
+
+nav, nav div {
+    height: 85px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-page figure{
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.logo-page figure:hover{
+    background: var(--color-gray);
+}
+
+.logo-page img{
+    width: 27px;
+    margin: 10px;
+}
+
+.div-btn-options a{
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.followers{
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.div-btn-options .followers:hover{
+    background: var(--color-gray);
+}
+
+.active{
+    background:var(--color-black);
+    color: var(--color-white);
+}
+
+.div-search{
+    width: 68%;
+}
+
+.div-search input, .div-search span{
+    background: var(--color-gray);
+    border: none;
+}
+
+.div-search span{
+    cursor: pointer;
+}
+
+.div-search img{
+    width: 19px;
+    padding: 14px;
+}
+
+.div-search span{
+    border-radius: 25px 0 0 25px;
+}
+
+.div-search input{
+    padding: 18px;
+    border-radius: 0 25px 25px 0;
+    width: 90%;
+}
+
+.div-icon-options figure{
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.div-icon-options figure:hover{
+    background-color: var(--color-gray);
+}
+
+.div-icon-options img{
+    width: 30px;
+}
+
+.user img{
+    border-radius: 100%;
+}
+/* -------------------------------------- REGLAS LAYOUT  ------------------------------------------- */
+.container{
+    margin: auto 40px;
+    margin-top: 120px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.item{
+    border-radius: 25px;
+    overflow: hidden;
+    align-items: stretch;
+    cursor: pointer;
+    position: relative;
+}
+
+.cover{
+    background: rgba(0,0,0,0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.cover:hover{
+    opacity: 1;
+}
+.cover div{
+    display: flex;
+}
+
+.cover a{
+    text-decoration: none;
+}
+
+.div-save{
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.div-save a{
+    color: #fff;
+    background: #BD081C;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.div-save a:hover{
+    background: rgb(230, 42, 64);
+}
+
+.div-options-cover{
+    padding: 30px;
+}
+
+.div-options-cover a{
+    background: rgba(255,255,255,0.75);
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    color: var(--color-black);
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.div-options-cover a:hover{
+    background: var(--color-white);
+}
+
+.div-options-cover a:nth-of-type(1){
+    border-radius: 25px;
+}
+
+.div-options-cover a:nth-of-type(1) img{
+    margin-right: 15px;
+}
+
+.div-options-cover a figure img{
+    width: 25px;
+}
+
+.item img, .item figure{
+    width: 100%;
+    height: 100%;
+}
+
+.level-1{
+    grid-row-end: span 3;
+}
+
+.level-2{
+    grid-row-end: span 2;
+}
+
+.level-3{
+    grid-row-end: span 1;
+}
+
+@media(max-width:700px){
+
+    .div-search{
+        display: flex;
+        justify-content: center;
+    }
+    .div-search input{
+        display: none;
+    }
+
+    .div-search span{
+        background: none;
+        border-radius: 100% ;
+    }
+
+    .div-search span:hover{
+        background: var(--color-gray);
+    }
+
+}
